@@ -1,0 +1,27 @@
+body {
+  background-color: black; }
+
+.container {
+  margin: auto;
+  width: 600px; }
+
+.new-contact input {
+  display: block;
+  margin: auto; }
+
+.new-contact form {
+  margin: auto; }
+
+.new-contact button {
+  position: absolute;
+  right: 15px; }
+
+.block {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  background-color: silver;
+  border-radius: 8px;
+  height: 100%; }
+  .block h4 {
+    color: white; }

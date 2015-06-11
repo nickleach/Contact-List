@@ -1,0 +1,32 @@
+body{
+  background-color: black;
+}
+.container{
+  margin: auto;
+  width: 600px;
+}
+.new-contact{
+  input{
+    display: block;
+    margin: auto;
+  }
+  form{
+    margin: auto;
+  }
+  button{
+    position: absolute;
+    right: 15px;
+  }
+}
+.block{
+  position: relative;
+  margin: auto;
+  h4{
+    color: white;
+  }
+  width: 400px;
+  background-color: silver;
+  border-radius: 8px;
+  height: 100%;
+}
+
