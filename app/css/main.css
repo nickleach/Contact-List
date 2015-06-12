@@ -10,11 +10,14 @@ body {
   margin: auto; }
 
 .new-contact form {
-  margin: auto; }
+  padding-top: 5px;
+  margin: auto;
+  height: 170px; }
 
 .new-contact button {
   position: absolute;
-  right: 15px; }
+  right: 105px;
+  bottom: 1px; }
 
 .block {
   position: relative;
@@ -24,4 +27,11 @@ body {
   border-radius: 8px;
   height: 100%; }
   .block h4 {
-    color: white; }
+    margin-bottom: 0;
+    color: white;
+    padding: 5px 50px;
+    border-bottom: 1px solid black; }
+
+.fa-trash-o {
+  float: right;
+  cursor: pointer; }

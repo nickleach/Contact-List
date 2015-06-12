@@ -11,22 +11,31 @@ body{
     margin: auto;
   }
   form{
+    padding-top: 5px;
     margin: auto;
+    height: 170px;
   }
   button{
     position: absolute;
-    right: 15px;
+    right: 105px;
+    bottom: 1px;
   }
 }
 .block{
   position: relative;
   margin: auto;
   h4{
+    margin-bottom: 0;
     color: white;
+    padding: 5px 50px;
+    border-bottom: 1px solid black;
   }
   width: 400px;
   background-color: silver;
   border-radius: 8px;
   height: 100%;
 }
-
+.fa-trash-o{
+  float: right;
+  cursor: pointer;
+}

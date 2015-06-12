@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>Contact List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
   <div class="container">
     <div class="new-contact block">
       <h4>Add New Contact</h4>
-      <form>
+      <form id="addContact">
         <input type="text" id="firstName" placeholder="First Name">
         <input type="text" id="lastName" placeholder="Last Name">
         <input type="text" id="email" placeholder="Email">
@@ -21,6 +22,8 @@
         <button>Add</button>
       </form>
     </div>
+    <div id= "contacts"></div>
+
   </div>
 
   <!-- VENDOR -->
@@ -31,7 +34,10 @@
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
   <!-- MAIN -->
-  <script src="js/main.js"></script>
+  <script src="js/models/contact.model.js"></script>
+  <script src="js/collections/contact.collection.js"></script>
+  <script src="js/main.js"></script>x
+
 
 </body>
 </html>
