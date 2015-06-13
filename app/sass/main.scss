@@ -1,9 +1,15 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+
 body{
-  background-color: black;
+  background-color: slategrey;
+}
+ul{
+  list-style: none;
 }
 .container{
   margin: auto;
-  width: 600px;
+  width: 950px;
 }
 .new-contact{
   input{
@@ -31,11 +37,29 @@ body{
     border-bottom: 1px solid black;
   }
   width: 400px;
-  background-color: silver;
-  border-radius: 8px;
+  border-radius: 5px;
   height: 100%;
 }
 .fa-trash-o{
   float: right;
   cursor: pointer;
+}
+.content-left{
+  float: left;
+  li{
+    margin-bottom: 5px;
+    color: white;
+    background-color: rgba(151, 198, 202, 0.93);
+  }
+}
+.content-right{
+  float: right;
+
+}
+.hidden{
+  visibility: hidden;
+  height: 0;
+}
+.list{
+  background-color: white;
 }

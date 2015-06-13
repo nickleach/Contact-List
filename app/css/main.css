@@ -1,9 +1,12 @@
 body {
-  background-color: black; }
+  background-color: slategrey; }
+
+ul {
+  list-style: none; }
 
 .container {
   margin: auto;
-  width: 600px; }
+  width: 950px; }
 
 .new-contact input {
   display: block;
@@ -23,8 +26,7 @@ body {
   position: relative;
   margin: auto;
   width: 400px;
-  background-color: silver;
-  border-radius: 8px;
+  border-radius: 5px;
   height: 100%; }
   .block h4 {
     margin-bottom: 0;
@@ -35,3 +37,20 @@ body {
 .fa-trash-o {
   float: right;
   cursor: pointer; }
+
+.content-left {
+  float: left; }
+  .content-left li {
+    margin-bottom: 5px;
+    color: white;
+    background-color: rgba(151, 198, 202, 0.93); }
+
+.content-right {
+  float: right; }
+
+.hidden {
+  visibility: hidden;
+  height: 0; }
+
+.list {
+  background-color: white; }

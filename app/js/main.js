@@ -31,13 +31,26 @@ var newContactFunction = function (e){
   });
  this.reset();
 };
+// Show Contact Function
+var showContact = function(e){
+  e.preventDefault();
+  var contactClicked = $(this).parent();
+  var contactId = contactClicked.attr('id');
+  $('.list').addClass('hidden');
+  $('#contacts').find("#"+contactId).removeClass('hidden');
+
+};
+//Show form function
+var showForm = function(e){
+  e.preventDefault(e);
+  $('.form-holder').toggleClass('hidden');
+};
 //Remove function
 var removeContact = function(e){
   e.preventDefault();
   var viewRemove = $(this).parent();
-  console.log(viewRemove);
+
   var dataRemove = viewRemove.attr('id');
-  console.log(dataRemove);
 
   $.ajax({
     url: url + '/' + dataRemove,
@@ -51,9 +64,15 @@ var removeContact = function(e){
 //Add to view
 var contactView = function(c){
   var newContact = template.contactlist(c);
+  var contactName = template.contactnames(c);
   $("#contacts").prepend(newContact);
+  $("#contactNames").prepend(contactName);
 };
 //On Click add
 $('#addContact').on('submit', newContactFunction);
+//On Clilck Show Contact
+$('#contactNames').on('click', 'h3', showContact);
+//On Click show form
+$('h4').on('click', showForm);
 //On Click remove
 $('#contacts').on('click', '.fa-trash-o', removeContact);
