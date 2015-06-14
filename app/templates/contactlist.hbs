@@ -1,9 +1,21 @@
 <div  id= "{{ _id }}" class="block hidden list">
   <div class="imageholder"><i class="fa fa-user"></i></div>
-  <h3>{{ first }}{{ last }}</h3>
-  <p>{{ email }}</p>
-  <p>{{ phone }}</p>
-  <p>{{ twitter }}</p>
-  <p>{{ linkedIn }}</p>
+  <h3>{{ first }}  {{ last }}</h3>
+  <p>
+    <label>Email:</label>
+    {{ email }}
+    </p>
+  <p>
+    <label>Phone Number:</label>
+    {{ phone }}
+    </p>
+  <p>
+    <i class= "fa fa-twitter-square"></i>
+    <a href="#">{{ twitter }}</a>
+    </p>
+  <p>
+    <i class= "fa fa-linkedin-square"></i>
+    {{ linkedIn }}
+    </p>
   <span id="remove" class="fa fa-trash-o">Delete</span>
 </div>

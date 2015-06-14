@@ -37,13 +37,16 @@ var showContact = function(e){
   var contactClicked = $(this).parent();
   var contactId = contactClicked.attr('id');
   $('.list').addClass('hidden');
+  $('.list').removeClass('visible-box');
   $('#contacts').find("#"+contactId).removeClass('hidden');
+  $('#contacts').find("#"+contactId).addClass('visible-box');
 
 };
 //Show form function
 var showForm = function(e){
   e.preventDefault(e);
-  $('.form-holder').toggleClass('hidden');
+  $('.form-holder').toggleClass('visible');
+  $('#addContact').toggleClass('formstuff');
 };
 //Remove function
 var removeContact = function(e){
