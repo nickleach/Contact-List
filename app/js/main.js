@@ -51,6 +51,7 @@ var removeContact = function(e){
   var viewRemove = $(this).parent();
 
   var dataRemove = viewRemove.attr('id');
+  $('#contactNames').find("#"+dataRemove).remove();
 
   $.ajax({
     url: url + '/' + dataRemove,

@@ -1,56 +1,109 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 body {
-  background-color: slategrey; }
+  background-color: darkslategrey;
+  font-family: 'Play', sans-serif; }
 
 ul {
   list-style: none; }
 
 .container {
-  margin: auto;
-  width: 950px; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: slategrey; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.new-contact label {
+  display: block;
+  font-size: 15px;
+  color: black;
+  margin: 10px; }
 
 .new-contact input {
   display: block;
-  margin: auto; }
+  margin: auto;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black; }
 
 .new-contact form {
   padding-top: 5px;
-  margin: auto;
-  height: 170px; }
+  margin: auto; }
 
 .new-contact button {
   position: absolute;
-  right: 105px;
-  bottom: 1px; }
+  right: 55px;
+  bottom: 8px; }
 
 .block {
   position: relative;
   margin: auto;
-  width: 400px;
-  border-radius: 5px;
   height: 100%; }
   .block h4 {
     margin-bottom: 0;
     color: white;
-    padding: 5px 50px;
-    border-bottom: 1px solid black; }
+    padding: 5px 50px; }
+
+.form-holder {
+  height: 430px; }
 
 .fa-trash-o {
   float: right;
   cursor: pointer; }
 
 .content-left {
-  float: left; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .content-left:last-child {
+    margin-right: 0; }
   .content-left li {
     margin-bottom: 5px;
     color: white;
-    background-color: rgba(151, 198, 202, 0.93); }
+    background-color: rgba(151, 198, 202, 0.93);
+    border-radius: 5px; }
 
 .content-right {
-  float: right; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-top: 50px; }
+  .content-right:last-child {
+    margin-right: 0; }
 
 .hidden {
   visibility: hidden;
   height: 0; }
 
 .list {
-  background-color: white; }
+  background-color: white;
+  width: 65%;
+  border-radius: 20px; }
+  .list i {
+    font-size: 80px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 60px;
+    padding: 18px;
+    color: white;
+    background-color: black; }
+
+.imageholder {
+  font-size: 110px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px; }
