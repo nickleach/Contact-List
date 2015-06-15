@@ -16,7 +16,7 @@ this["template"]["contactlist"] = Handlebars.template({"compiler":[6,">= 2.0.0-b
     + alias3(((helper = (helper = helpers.twitter || (depth0 != null ? depth0.twitter : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"twitter","hash":{},"data":data}) : helper)))
     + "</a>\n    </p>\n  <p>\n    <i class= \"fa fa-linkedin-square\"></i>\n    "
     + alias3(((helper = (helper = helpers.linkedIn || (depth0 != null ? depth0.linkedIn : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"linkedIn","hash":{},"data":data}) : helper)))
-    + "\n    </p>\n  <span id=\"remove\" class=\"fa fa-trash-o\">Delete</span>\n</div>\n";
+    + "\n    </p>\n  <span id=\"remove\"><i class=\"fa fa-trash-o\"></i>Delete</span>\n</div>\n";
 },"useData":true});
 this["template"] = this["template"] || {};
 this["template"]["contactnames"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

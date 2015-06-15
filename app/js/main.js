@@ -9,15 +9,19 @@ allContacts.fetch().done(function(){
     contactView(contact.attributes);
   });
 });
+
+
 //Add new contact
 var newContactFunction = function (e){
   e.preventDefault(e);
+  //gets input data
   var newFirstName = $(this).find('#firstName').val();
   var newLastName = $(this).find('#lastName').val();
   var newEmail = $(this).find('#email').val();
   var newPhone = $(this).find('#phone').val();
   var newTwitter = $(this).find('#twitter').val();
   var newLinkedIn = $(this).find('#linkedIn').val();
+  //create new instance
   var contact = new Contact ({
     first: newFirstName,
     last: newLastName,
@@ -26,37 +30,51 @@ var newContactFunction = function (e){
     twitter: newTwitter,
     linkedIn: newLinkedIn
   });
+
   allContacts.add(contact).save().success( function(data){
     contactView(data);
   });
+
  this.reset();
 };
+
+
 // Show Contact Function
 var showContact = function(e){
   e.preventDefault();
+
   var contactClicked = $(this).parent();
   var contactId = contactClicked.attr('id');
-  $('.list').addClass('hidden');
-  $('.list').removeClass('visible-box');
-  $('#contacts').find("#"+contactId).removeClass('hidden');
-  $('#contacts').find("#"+contactId).addClass('visible-box');
+
+  $('.list').addClass('hidden'); //hides content
+  $('.list').removeClass('visible-box'); //helps with transitions
+
+  $('#contacts').find("#"+contactId).removeClass('hidden'); //shows content
+  $('#contacts').find("#"+contactId).addClass('visible-box'); //helps with transitions
 
 };
+
+
 //Show form function
 var showForm = function(e){
   e.preventDefault(e);
-  $('.form-holder').toggleClass('visible');
-  $('#addContact').toggleClass('formstuff');
+
+  $('.form-holder').toggleClass('visible'); //makes block visible
+
+  $('#addContact').toggleClass('formstuff'); //makes inputs and form visible
 };
+
+
 //Remove function
 var removeContact = function(e){
   e.preventDefault();
   var viewRemove = $(this).parent();
 
   var dataRemove = viewRemove.attr('id');
-  $('#contactNames').find("#"+dataRemove).remove();
+  $('#contactNames').find("#"+dataRemove).remove(); //finds contact info on the right
 
-  $.ajax({
+
+  $.ajax({ //deletes from URL
     url: url + '/' + dataRemove,
     type: 'DELETE'
     }).done( function(){
@@ -67,10 +85,12 @@ var removeContact = function(e){
 
 //Add to view
 var contactView = function(c){
-  var newContact = template.contactlist(c);
-  var contactName = template.contactnames(c);
-  $("#contacts").prepend(newContact);
-  $("#contactNames").prepend(contactName);
+
+  var newContact = template.contactlist(c); //contact info
+  var contactName = template.contactnames(c); //contact names
+
+  $("#contacts").prepend(newContact); //contact info on right
+  $("#contactNames").prepend(contactName); //names on left side
 };
 //On Click add
 $('#addContact').on('submit', newContactFunction);
