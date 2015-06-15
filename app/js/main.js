@@ -45,6 +45,9 @@ var showContact = function(e){
 
   var contactClicked = $(this).parent();
   var contactId = contactClicked.attr('id');
+  $('h3').removeClass('contact-clicked');
+  $(this).addClass('contact-clicked');
+
 
   $('.list').addClass('hidden'); //hides content
   $('.list').removeClass('visible-box'); //helps with transitions
@@ -71,7 +74,7 @@ var removeContact = function(e){
   var viewRemove = $(this).parent();
 
   var dataRemove = viewRemove.attr('id');
-  $('#contactNames').find("#"+dataRemove).remove(); //finds contact info on the right
+  $('#contactNames').find("#"+dataRemove).remove(); //finds contact info on the left
 
 
   $.ajax({ //deletes from URL
@@ -83,6 +86,11 @@ var removeContact = function(e){
 
 };
 
+var updateView = function(person) {
+    var contactHtml = template.contactnames(person);
+    $('#contactNames').append(contactHtml);
+  };
+
 //Add to view
 var contactView = function(c){
 
@@ -92,6 +100,26 @@ var contactView = function(c){
   $("#contacts").prepend(newContact); //contact info on right
   $("#contactNames").prepend(contactName); //names on left side
 };
+//Drop down list
+$("#sortBy").change(function(){
+  var sorted = $(this).val();
+  switch(sorted){
+    case 'firstN':
+      allContacts.sortIt('firstName');
+      allContacts.sort();
+      break;
+    case 'lastN':
+      allContacts.sortIt('lastName');
+      allContacts.sort();
+      break;
+  }
+  $( "#contactNames" ).empty();
+    allContacts.fetch().done(function() {
+      allContacts.each(function(model) {
+        updateView(model.attributes);
+      });
+    });
+});
 //On Click add
 $('#addContact').on('submit', newContactFunction);
 //On Clilck Show Contact
@@ -99,4 +127,4 @@ $('#contactNames').on('click', 'h3', showContact);
 //On Click show form
 $('h4').on('click', showForm);
 //On Click remove
-$('#contacts').on('click', '.fa-trash-o', removeContact);
+$('#contacts').on('click', 'span', removeContact);

@@ -27,7 +27,8 @@ ul {
   margin-right: auto;
   background-color: #a1a4a8;
   border: 4px solid black;
-  border-radius: 11px; }
+  border-radius: 11px;
+  margin-top: 10px; }
   .container::after {
     clear: both;
     content: "";
@@ -96,6 +97,9 @@ ul {
     margin-right: 5px; }
 
 .content-left li:hover {
+  background-color: teal; }
+
+.contact-clicked {
   background-color: teal; }
 
 .fa-trash-o {
@@ -178,3 +182,34 @@ ul {
 .fa-plus-circle {
   color: white;
   float: right; }
+
+.contact-holder {
+  background-color: #2F4F4F;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: -13px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  position: relative; }
+  .contact-holder h2 {
+    position: absolute;
+    top: 10px;
+    color: white; }
+  .contact-holder select {
+    position: absolute;
+    right: 15px;
+    top: 25px; }
+  .contact-holder h5 {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    margin: 0;
+    margin-right: 65px;
+    color: white; }
+  .contact-holder ul {
+    padding-left: 0; }
