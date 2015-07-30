@@ -4,3 +4,10 @@
 
 > This is a contact list created using Backbone.
 
+####Tools Used
+* Backbone 
+* jQuery
+* Handlebars
+* Underscore
+* Node Server
+* Heroku App
