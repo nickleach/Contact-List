@@ -11,3 +11,6 @@
 * Underscore
 * Node Server
 * Heroku App
+* Bourbon & Neat
+* SASS
+* Font-Awesome
